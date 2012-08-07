@@ -1,0 +1,101 @@
+httperf --timeout=2 --client=0/1 --server=wsmt1m.elasticbeanstalk.com --port=80 --uri=/application/index/schedule-bbc-one-xml --rate=10 --send-buffer=4096 --recv-buffer=16384 --num-conns=3000 --num-calls=1
+Maximum connect burst length: 1
+
+Total: connections 3000 requests 3000 replies 2618 test-duration 299.992 s
+
+Connection rate: 10.0 conn/s (100.0 ms/conn, <=21 concurrent connections)
+Connection time [ms]: min 4.2 avg 65.1 max 1564.7 median 49.5 stddev 44.3
+Connection time [ms]: connect 3.6
+Connection length [replies/conn]: 1.000
+
+Request rate: 10.0 req/s (100.0 ms/req)
+Request size [B]: 118.0
+
+Reply rate [replies/s]: min 0.0 avg 8.7 max 10.3 stddev 3.3 (59 samples)
+Reply time [ms]: response 43.2 transfer 18.3
+Reply size [B]: header 188.0 content 14409.0 footer 1.0 (total 14598.0)
+Reply status: 1xx=0 2xx=2368 3xx=0 4xx=0 5xx=250
+
+CPU time [s]: user 109.65 system 190.08 (user 36.6% system 63.4% total 99.9%)
+Net I/O: 125.6 KB/s (1.0*10^6 bps)
+
+Errors: total 382 client-timo 362 socket-timo 0 connrefused 0 connreset 20
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0
+
+########################################################################################################
+
+httperf --timeout=2 --client=0/1 --server=wsmt1m.elasticbeanstalk.com --port=80 --uri=/application/index/schedule-bbc-one-xml --rate=15 --send-buffer=4096 --recv-buffer=16384 --num-conns=4500 --num-calls=1
+Maximum connect burst length: 2
+
+Total: connections 4500 requests 4500 replies 4500 test-duration 300.029 s
+
+Connection rate: 15.0 conn/s (66.7 ms/conn, <=5 concurrent connections)
+Connection time [ms]: min 45.7 avg 91.0 max 288.4 median 90.5 stddev 36.9
+Connection time [ms]: connect 3.6
+Connection length [replies/conn]: 1.000
+
+Request rate: 15.0 req/s (66.7 ms/req)
+Request size [B]: 118.0
+
+Reply rate [replies/s]: min 14.5 avg 15.0 max 15.4 stddev 0.3 (59 samples)
+Reply time [ms]: response 64.3 transfer 23.1
+Reply size [B]: header 196.0 content 15931.0 footer 1.0 (total 16128.0)
+Reply status: 1xx=0 2xx=4500 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 111.75 system 188.26 (user 37.2% system 62.7% total 100.0%)
+Net I/O: 238.0 KB/s (1.9*10^6 bps)
+
+Errors: total 0 client-timo 0 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0
+
+########################################################################################################
+
+httperf --timeout=2 --client=0/1 --server=wsmt1m.elasticbeanstalk.com --port=80 --uri=/application/index/schedule-bbc-one-xml --rate=20 --send-buffer=4096 --recv-buffer=16384 --num-conns=6000 --num-calls=1
+Maximum connect burst length: 2
+
+Total: connections 6000 requests 6000 replies 6000 test-duration 300.065 s
+
+Connection rate: 20.0 conn/s (50.0 ms/conn, <=6 concurrent connections)
+Connection time [ms]: min 46.8 avg 114.9 max 245.4 median 124.5 stddev 22.1
+Connection time [ms]: connect 4.0
+Connection length [replies/conn]: 1.000
+
+Request rate: 20.0 req/s (50.0 ms/req)
+Request size [B]: 118.0
+
+Reply rate [replies/s]: min 19.6 avg 20.0 max 20.4 stddev 0.1 (59 samples)
+Reply time [ms]: response 89.1 transfer 21.8
+Reply size [B]: header 196.0 content 15931.0 footer 1.0 (total 16128.0)
+Reply status: 1xx=0 2xx=6000 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 107.58 system 192.46 (user 35.9% system 64.1% total 100.0%)
+Net I/O: 317.2 KB/s (2.6*10^6 bps)
+
+Errors: total 0 client-timo 0 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0
+
+########################################################################################################
+
+httperf --timeout=2 --client=0/1 --server=wsmt1m.elasticbeanstalk.com --port=80 --uri=/application/index/schedule-bbc-one-xml --rate=25 --send-buffer=4096 --recv-buffer=16384 --num-conns=7500 --num-calls=1
+Maximum connect burst length: 3
+
+Total: connections 7500 requests 7500 replies 1164 test-duration 301.982 s
+
+Connection rate: 24.8 conn/s (40.3 ms/conn, <=54 concurrent connections)
+Connection time [ms]: min 4.3 avg 454.6 max 2106.2 median 64.5 stddev 611.2
+Connection time [ms]: connect 4.0
+Connection length [replies/conn]: 1.000
+
+Request rate: 24.8 req/s (40.3 ms/req)
+Request size [B]: 118.0
+
+Reply rate [replies/s]: min 0.0 avg 3.9 max 25.0 stddev 8.5 (59 samples)
+Reply time [ms]: response 428.7 transfer 18.2
+Reply size [B]: header 147.0 content 6706.0 footer 0.0 (total 6853.0)
+Reply status: 1xx=0 2xx=490 3xx=0 4xx=0 5xx=674
+
+CPU time [s]: user 54.80 system 247.10 (user 18.1% system 81.8% total 100.0%)
+Net I/O: 28.7 KB/s (0.2*10^6 bps)
+
+Errors: total 6336 client-timo 6336 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0

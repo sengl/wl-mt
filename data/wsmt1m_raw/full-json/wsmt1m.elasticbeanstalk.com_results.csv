@@ -1,0 +1,5 @@
+dem_req_rate,req_rate_wsmt1m.elasticbeanstalk.com,con_rate_wsmt1m.elasticbeanstalk.com,min_rep_rate_wsmt1m.elasticbeanstalk.com,avg_rep_rate_wsmt1m.elasticbeanstalk.com,max_rep_rate_wsmt1m.elasticbeanstalk.com,stddev_rep_rate_wsmt1m.elasticbeanstalk.com,resp_time_wsmt1m.elasticbeanstalk.com,net_io_wsmt1m.elasticbeanstalk.com,errors_wsmt1m.elasticbeanstalk.com
+10,10.0,10.0,9.5,10.0,10.3,0.2,54.9,85.6,0
+15,15.0,15.0,14.2,15.0,16.0,0.4,83.3,128.3,0
+20,20.0,20.0,19.5,20.0,20.6,0.3,105.0,171.1,0
+25,24.8,24.8,0.0,3.5,25.4,8.1,408.9,14.2,602.9053420806
