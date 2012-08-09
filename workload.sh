@@ -14,20 +14,29 @@
 ###################
 
 #### deployments to test
-#envs=(wsmt1m.elasticbeanstalk.com wsmt2m.elasticbeanstalk.com wsmt4m.elasticbeanstalk.com)
+## environments available
+# envs=(wsmt1m.elasticbeanstalk.com wsmt2m.elasticbeanstalk.com wsmt4m.elasticbeanstalk.com)
+
+## environment to test
 envs=(wsmt4m.elasticbeanstalk.com)
 envs_names=(wsmt4m)
 envs_count=${#envs[@]}
 
-#### URIs to test
-# uri_names=(full-json full-xml full-xhtml today-json tomorrow-json today-xml tomorrow-xml today-xhtml tomorrow-xhtml today-early-json tomorrow-early-json today-early-xml tomorrow-early-xml today-early-xhtml tomorrow-early-xhtml today-morning-json tomorrow-morning-json today-morning-xml tomorrow-morning-xml today-morning-xhtml tomorrow-morning-xhtml today-afternoon-json tomorrow-afternoon-json today-afternoon-xml tomorrow-afternoon-xml today-afternoon-xhtml tomorrow-afternoon-xhtml today-evening-json tomorrow-evening-json today-evening-xml tomorrow-evening-xml today-evening-xhtml tomorrow-evening-xhtml)
-# uri_names=(full-json full-xml full-xhtml today-json tomorrow-json today-xml tomorrow-xml today-xhtml tomorrow-xhtml today-early-json today-early-xml today-early-xhtml today-morning-json today-morning-xml today-morning-xhtml today-afternoon-json today-afternoon-xml today-afternoon-xhtml today-evening-json today-evening-xml today-evening-xhtml)
-uri_names=(full-xhtml full-xml full-json today-xhtml today-xml today-json tomorrow-json today-early-json today-morning-json today-afternoon-json today-evening-xhtml today-evening-xml today-evening-json)
+#### URI names
+## names of the full range of URIs
+uri_names=(full-json full-xml full-xhtml today-json tomorrow-json today-xml tomorrow-xml today-xhtml tomorrow-xhtml today-early-json tomorrow-early-json today-early-xml tomorrow-early-xml today-early-xhtml tomorrow-early-xhtml today-morning-json tomorrow-morning-json today-morning-xml tomorrow-morning-xml today-morning-xhtml tomorrow-morning-xhtml today-afternoon-json tomorrow-afternoon-json today-afternoon-xml tomorrow-afternoon-xml today-afternoon-xhtml tomorrow-afternoon-xhtml today-evening-json tomorrow-evening-json today-evening-xml tomorrow-evening-xml today-evening-xhtml tomorrow-evening-xhtml)
 
-# uris=("schedule-bbc-one-json" "schedule-bbc-one-xml" "schedule-bbc-one-xhtml" "schedule-bbc-one-20120721-json" "schedule-bbc-one-20120722-json" "schedule-bbc-one-20120721-xml" "schedule-bbc-one-20120722-xml" "schedule-bbc-one-20120721-xhtml" "schedule-bbc-one-20120722-xhtml" "schedule-bbc-one-early-20120721-json" "schedule-bbc-one-early-20120722-json" "schedule-bbc-one-early-20120721-xml" "schedule-bbc-one-early-20120722-xml" "schedule-bbc-one-early-20120721-xhtml" "schedule-bbc-one-early-20120722-xhtml" "schedule-bbc-one-morning-20120721-json" "schedule-bbc-one-morning-20120722-json" "schedule-bbc-one-morning-20120721-xml" "schedule-bbc-one-morning-20120722-xml" "schedule-bbc-one-morning-20120721-xhtml" "schedule-bbc-one-morning-20120722-xhtml" "schedule-bbc-one-afternoon-20120721-json" "schedule-bbc-one-afternoon-20120722-json" "schedule-bbc-one-afternoon-20120721-xml" "schedule-bbc-one-afternoon-20120722-xml" "schedule-bbc-one-afternoon-20120721-xhtml" "schedule-bbc-one-afternoon-20120722-xhtml" "schedule-bbc-one-evening-20120721-json" "schedule-bbc-one-evening-20120722-json" "schedule-bbc-one-evening-20120721-xml" "schedule-bbc-one-evening-20120722-xml" "schedule-bbc-one-evening-20120721-xhtml" "schedule-bbc-one-evening-20120722-xhtml")
-# uris=("schedule-bbc-one-json" "schedule-bbc-one-xml" "schedule-bbc-one-xhtml" "schedule-bbc-one-20120721-json" "schedule-bbc-one-20120722-json" "schedule-bbc-one-20120721-xml" "schedule-bbc-one-20120722-xml" "schedule-bbc-one-20120721-xhtml" "schedule-bbc-one-20120722-xhtml" "schedule-bbc-one-early-20120721-json" "schedule-bbc-one-early-20120721-xml" "schedule-bbc-one-early-20120721-xhtml" "schedule-bbc-one-morning-20120721-json" "schedule-bbc-one-morning-20120721-xml" "schedule-bbc-one-morning-20120721-xhtml" "schedule-bbc-one-afternoon-20120721-json" "schedule-bbc-one-afternoon-20120721-xml" "schedule-bbc-one-afternoon-20120721-xhtml" "schedule-bbc-one-evening-20120721-json" "schedule-bbc-one-evening-20120721-xml" "schedule-bbc-one-evening-20120721-xhtml")
-uris=("schedule-bbc-one-xhtml" "schedule-bbc-one-xml" "schedule-bbc-one-json" "schedule-bbc-one-20120721-xhtml" "schedule-bbc-one-20120721-xml" "schedule-bbc-one-20120721-json" "schedule-bbc-one-20120722-json" "schedule-bbc-one-early-20120721-json" "schedule-bbc-one-morning-20120721-json" "schedule-bbc-one-afternoon-20120721-json" "schedule-bbc-one-evening-20120721-xhtml" "schedule-bbc-one-evening-20120721-xml" "schedule-bbc-one-evening-20120721-json")
+## names of a URI subset
+# uri_names=(full-xhtml full-xml full-json today-xhtml today-xml today-json tomorrow-json today-early-json today-morning-json today-afternoon-json today-evening-xhtml today-evening-xml today-evening-json)
 
+#### URIs to test following this structure /application/index/[:URI]
+## full range of URIs
+uris=("schedule-bbc-one-json" "schedule-bbc-one-xml" "schedule-bbc-one-xhtml" "schedule-bbc-one-20120721-json" "schedule-bbc-one-20120722-json" "schedule-bbc-one-20120721-xml" "schedule-bbc-one-20120722-xml" "schedule-bbc-one-20120721-xhtml" "schedule-bbc-one-20120722-xhtml" "schedule-bbc-one-early-20120721-json" "schedule-bbc-one-early-20120722-json" "schedule-bbc-one-early-20120721-xml" "schedule-bbc-one-early-20120722-xml" "schedule-bbc-one-early-20120721-xhtml" "schedule-bbc-one-early-20120722-xhtml" "schedule-bbc-one-morning-20120721-json" "schedule-bbc-one-morning-20120722-json" "schedule-bbc-one-morning-20120721-xml" "schedule-bbc-one-morning-20120722-xml" "schedule-bbc-one-morning-20120721-xhtml" "schedule-bbc-one-morning-20120722-xhtml" "schedule-bbc-one-afternoon-20120721-json" "schedule-bbc-one-afternoon-20120722-json" "schedule-bbc-one-afternoon-20120721-xml" "schedule-bbc-one-afternoon-20120722-xml" "schedule-bbc-one-afternoon-20120721-xhtml" "schedule-bbc-one-afternoon-20120722-xhtml" "schedule-bbc-one-evening-20120721-json" "schedule-bbc-one-evening-20120722-json" "schedule-bbc-one-evening-20120721-xml" "schedule-bbc-one-evening-20120722-xml" "schedule-bbc-one-evening-20120721-xhtml" "schedule-bbc-one-evening-20120722-xhtml")
+
+## subset of URIs to test
+# uris=("schedule-bbc-one-xhtml" "schedule-bbc-one-xml" "schedule-bbc-one-json" "schedule-bbc-one-20120721-xhtml" "schedule-bbc-one-20120721-xml" "schedule-bbc-one-20120721-json" "schedule-bbc-one-20120722-json" "schedule-bbc-one-early-20120721-json" "schedule-bbc-one-morning-20120721-json" "schedule-bbc-one-afternoon-20120721-json" "schedule-bbc-one-evening-20120721-xhtml" "schedule-bbc-one-evening-20120721-xml" "schedule-bbc-one-evening-20120721-json")
+
+## URIs count
 uris_count=${#uris[@]}
 
 #### transaction timeout
@@ -40,19 +49,19 @@ client2=ec2-.compute-1.amazonaws.com:4600
 #### workload request rates
 
 ## wsmt1m
-#low_rate=18
-#rate_step=2
-#high_rate=24
+#low_rate=10
+#rate_step=5
+#high_rate=25
 
 ## wsmt2m
-#low_rate=36
-#rate_step=4
-#high_rate=48
+#low_rate=20
+#rate_step=10
+#high_rate=50
 
 ## wsmt4m
-low_rate=72
-rate_step=8
-high_rate=96
+low_rate=40
+rate_step=20
+high_rate=100
 
 ## warmup
 warmup_low_rate=10
@@ -64,7 +73,6 @@ num_call=1
 
 #### test duration in seconds
 test_time=300
-#test_time=150
 warmup_test_time=20
 
 #### output format for results
@@ -74,7 +82,7 @@ output_format=csv
 port=80
 
 #### current timestamp
-#timestamp=$(date -u +%F_%H:%M:%S)
+timestamp=$(date -u +%F_%H:%M:%S)
 
 #############################
 #### PREPARE DIRECTORIES ####
@@ -87,6 +95,7 @@ else
 	mkdir autobench
 fi
 
+#### create subdirectory to save warmup output
 if [ -d "autobench/warmup" ]; then
 	echo "directory autobench/warmup already exists"
 else 
