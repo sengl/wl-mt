@@ -1,0 +1,1 @@
+autobench --single_host --host1 wsmt1m.elasticbeanstalk.com --port1 80 --uri1 /application/index/schedule-bbc-one-xml --low_rate 12 --rate_step 5 --high_rate 22 --num_call 1 --const_test_time 300 --timeout 2 --output_fmt csv --file autobench/full-xml_wsmt1m_results.csv

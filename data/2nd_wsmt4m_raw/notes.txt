@@ -1,0 +1,19 @@
+1ST RUN
+2012-08-08 18:30-22:00
+	full-json
+	full-xhtml
+	full-xml
+	today-afternoon-json
+	today-early-json
+	today-evening-json
+	today-evening-xhtml
+	today-evening-xml
+	today-json
+	today-morning-json
+	today-xhtml
+	today-xml
+	(+autobench_stdout.txt)
+	(+warmup)
+
+LOADS
+50,70,90

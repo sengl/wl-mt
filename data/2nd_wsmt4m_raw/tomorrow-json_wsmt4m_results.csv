@@ -1,0 +1,4 @@
+dem_req_rate,req_rate_wsmt4m.elasticbeanstalk.com,con_rate_wsmt4m.elasticbeanstalk.com,min_rep_rate_wsmt4m.elasticbeanstalk.com,avg_rep_rate_wsmt4m.elasticbeanstalk.com,max_rep_rate_wsmt4m.elasticbeanstalk.com,stddev_rep_rate_wsmt4m.elasticbeanstalk.com,resp_time_wsmt4m.elasticbeanstalk.com,net_io_wsmt4m.elasticbeanstalk.com,errors_wsmt4m.elasticbeanstalk.com
+50,50.0,50.0,0.0,21.7,61.4,24.3,200.1,83.0,126.48346670693
+70,70.0,70.0,67.1,69.9,72.0,1.1,122.2,313.1,0.0333444481493831
+90,89.4,89.4,0.0,52.5,94.0,44.4,180.4,238.7,70.9077098366882

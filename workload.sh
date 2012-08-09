@@ -15,17 +15,18 @@
 
 #### deployments to test
 #envs=(wsmt1m.elasticbeanstalk.com wsmt2m.elasticbeanstalk.com wsmt4m.elasticbeanstalk.com)
-envs=(wsmt2m.elasticbeanstalk.com)
+envs=(wsmt4m.elasticbeanstalk.com)
+envs_names=(wsmt4m)
 envs_count=${#envs[@]}
 
 #### URIs to test
 # uri_names=(full-json full-xml full-xhtml today-json tomorrow-json today-xml tomorrow-xml today-xhtml tomorrow-xhtml today-early-json tomorrow-early-json today-early-xml tomorrow-early-xml today-early-xhtml tomorrow-early-xhtml today-morning-json tomorrow-morning-json today-morning-xml tomorrow-morning-xml today-morning-xhtml tomorrow-morning-xhtml today-afternoon-json tomorrow-afternoon-json today-afternoon-xml tomorrow-afternoon-xml today-afternoon-xhtml tomorrow-afternoon-xhtml today-evening-json tomorrow-evening-json today-evening-xml tomorrow-evening-xml today-evening-xhtml tomorrow-evening-xhtml)
-uri_names=(full-json full-xml full-xhtml today-json tomorrow-json today-xml tomorrow-xml today-xhtml tomorrow-xhtml today-early-json today-early-xml today-early-xhtml today-morning-json today-morning-xml today-morning-xhtml today-afternoon-json today-afternoon-xml today-afternoon-xhtml today-evening-json today-evening-xml today-evening-xhtml)
-# uri_names=(full-json today-early-json today-early-xml today-early-xhtml today-morning-json today-morning-xml today-morning-xhtml today-afternoon-json today-afternoon-xml today-afternoon-xhtml today-evening-json today-evening-xml today-evening-xhtml)
+# uri_names=(full-json full-xml full-xhtml today-json tomorrow-json today-xml tomorrow-xml today-xhtml tomorrow-xhtml today-early-json today-early-xml today-early-xhtml today-morning-json today-morning-xml today-morning-xhtml today-afternoon-json today-afternoon-xml today-afternoon-xhtml today-evening-json today-evening-xml today-evening-xhtml)
+uri_names=(full-xhtml full-xml full-json today-xhtml today-xml today-json tomorrow-json today-early-json today-morning-json today-afternoon-json today-evening-xhtml today-evening-xml today-evening-json)
 
 # uris=("schedule-bbc-one-json" "schedule-bbc-one-xml" "schedule-bbc-one-xhtml" "schedule-bbc-one-20120721-json" "schedule-bbc-one-20120722-json" "schedule-bbc-one-20120721-xml" "schedule-bbc-one-20120722-xml" "schedule-bbc-one-20120721-xhtml" "schedule-bbc-one-20120722-xhtml" "schedule-bbc-one-early-20120721-json" "schedule-bbc-one-early-20120722-json" "schedule-bbc-one-early-20120721-xml" "schedule-bbc-one-early-20120722-xml" "schedule-bbc-one-early-20120721-xhtml" "schedule-bbc-one-early-20120722-xhtml" "schedule-bbc-one-morning-20120721-json" "schedule-bbc-one-morning-20120722-json" "schedule-bbc-one-morning-20120721-xml" "schedule-bbc-one-morning-20120722-xml" "schedule-bbc-one-morning-20120721-xhtml" "schedule-bbc-one-morning-20120722-xhtml" "schedule-bbc-one-afternoon-20120721-json" "schedule-bbc-one-afternoon-20120722-json" "schedule-bbc-one-afternoon-20120721-xml" "schedule-bbc-one-afternoon-20120722-xml" "schedule-bbc-one-afternoon-20120721-xhtml" "schedule-bbc-one-afternoon-20120722-xhtml" "schedule-bbc-one-evening-20120721-json" "schedule-bbc-one-evening-20120722-json" "schedule-bbc-one-evening-20120721-xml" "schedule-bbc-one-evening-20120722-xml" "schedule-bbc-one-evening-20120721-xhtml" "schedule-bbc-one-evening-20120722-xhtml")
-uris=("schedule-bbc-one-json" "schedule-bbc-one-xml" "schedule-bbc-one-xhtml" "schedule-bbc-one-20120721-json" "schedule-bbc-one-20120722-json" "schedule-bbc-one-20120721-xml" "schedule-bbc-one-20120722-xml" "schedule-bbc-one-20120721-xhtml" "schedule-bbc-one-20120722-xhtml" "schedule-bbc-one-early-20120721-json" "schedule-bbc-one-early-20120721-xml" "schedule-bbc-one-early-20120721-xhtml" "schedule-bbc-one-morning-20120721-json" "schedule-bbc-one-morning-20120721-xml" "schedule-bbc-one-morning-20120721-xhtml" "schedule-bbc-one-afternoon-20120721-json" "schedule-bbc-one-afternoon-20120721-xml" "schedule-bbc-one-afternoon-20120721-xhtml" "schedule-bbc-one-evening-20120721-json" "schedule-bbc-one-evening-20120721-xml" "schedule-bbc-one-evening-20120721-xhtml")
-# uris=("schedule-bbc-one-json" "schedule-bbc-one-early-20120721-json" "schedule-bbc-one-early-20120721-xml" "schedule-bbc-one-early-20120721-xhtml" "schedule-bbc-one-morning-20120721-json" "schedule-bbc-one-morning-20120721-xml" "schedule-bbc-one-morning-20120721-xhtml" "schedule-bbc-one-afternoon-20120721-json" "schedule-bbc-one-afternoon-20120721-xml" "schedule-bbc-one-afternoon-20120721-xhtml" "schedule-bbc-one-evening-20120721-json" "schedule-bbc-one-evening-20120721-xml" "schedule-bbc-one-evening-20120721-xhtml")
+# uris=("schedule-bbc-one-json" "schedule-bbc-one-xml" "schedule-bbc-one-xhtml" "schedule-bbc-one-20120721-json" "schedule-bbc-one-20120722-json" "schedule-bbc-one-20120721-xml" "schedule-bbc-one-20120722-xml" "schedule-bbc-one-20120721-xhtml" "schedule-bbc-one-20120722-xhtml" "schedule-bbc-one-early-20120721-json" "schedule-bbc-one-early-20120721-xml" "schedule-bbc-one-early-20120721-xhtml" "schedule-bbc-one-morning-20120721-json" "schedule-bbc-one-morning-20120721-xml" "schedule-bbc-one-morning-20120721-xhtml" "schedule-bbc-one-afternoon-20120721-json" "schedule-bbc-one-afternoon-20120721-xml" "schedule-bbc-one-afternoon-20120721-xhtml" "schedule-bbc-one-evening-20120721-json" "schedule-bbc-one-evening-20120721-xml" "schedule-bbc-one-evening-20120721-xhtml")
+uris=("schedule-bbc-one-xhtml" "schedule-bbc-one-xml" "schedule-bbc-one-json" "schedule-bbc-one-20120721-xhtml" "schedule-bbc-one-20120721-xml" "schedule-bbc-one-20120721-json" "schedule-bbc-one-20120722-json" "schedule-bbc-one-early-20120721-json" "schedule-bbc-one-morning-20120721-json" "schedule-bbc-one-afternoon-20120721-json" "schedule-bbc-one-evening-20120721-xhtml" "schedule-bbc-one-evening-20120721-xml" "schedule-bbc-one-evening-20120721-json")
 
 uris_count=${#uris[@]}
 
@@ -33,37 +34,38 @@ uris_count=${#uris[@]}
 timeout=2
 
 #### load producing clients
-client1=ec2-23-22-199-136.compute-1.amazonaws.com:4600
-client2=ec2-23-22-211-160.compute-1.amazonaws.com:4600
+client1=ec2-.compute-1.amazonaws.com:4600
+client2=ec2-.compute-1.amazonaws.com:4600
 
 #### workload request rates
 
 ## wsmt1m
-#low_rate=10
-#rate_step=5
-#high_rate=25
+#low_rate=18
+#rate_step=2
+#high_rate=24
 
 ## wsmt2m
-#low_rate=20
-#rate_step=10
-#high_rate=50
+#low_rate=36
+#rate_step=4
+#high_rate=48
 
 ## wsmt4m
-#low_rate=40
-#rate_step=20
-#high_rate=100
+low_rate=72
+rate_step=8
+high_rate=96
 
 ## warmup
-low_rate=5
-rate_step=1
-high_rate=5
+warmup_low_rate=10
+warmup_rate_step=1
+warmup_high_rate=10
 
 #### calls per connection
 num_call=1
 
 #### test duration in seconds
-#test_time=300
-test_time=20
+test_time=300
+#test_time=150
+warmup_test_time=20
 
 #### output format for results
 output_format=csv
@@ -72,31 +74,36 @@ output_format=csv
 port=80
 
 #### current timestamp
-timestamp=$(date -u +%F_%H:%M:%S)
+#timestamp=$(date -u +%F_%H:%M:%S)
 
 #############################
 #### PREPARE DIRECTORIES ####
 #############################
 
 #### create directory to save result output
-#mkdir /home/ubuntu/autobench_$timestamp
 if [ -d "autobench" ]; then
 	echo "directory autobench already exists"
 else 
 	mkdir autobench
+fi
+
+if [ -d "autobench/warmup" ]; then
+	echo "directory autobench/warmup already exists"
+else 
+	mkdir autobench/warmup
 fi 
 
 
 #### create subdirectories for each URI to test
-for (( f=0; f<$uris_count; f++ ))
-do
-	#mkdir /home/ubuntu/
-	if [ -d "autobench/${uri_names[$f]}" ]; then
-		echo "directory autobench/${uri_names[$f]} already exists"
-	else
-		mkdir autobench/${uri_names[$f]}
-	fi
-done
+#for (( f=0; f<$uris_count; f++ ))
+#do
+#	#mkdir /home/ubuntu/
+#	if [ -d "autobench/${uri_names[$f]}" ]; then
+#		echo "directory autobench/${uri_names[$f]} already exists"
+#	else
+#		mkdir autobench/${uri_names[$f]}
+#	fi
+#done
 
 ###################
 ####  SETTINGS ####
@@ -113,19 +120,23 @@ done
 function produce_load() {
 
 	#### build command
-	if [ -e "autobench/$3/$1_results.csv" ]; then
-		echo "file autobench/$3/$1_results.csv already exists"
+	if [ -e "autobench/$3_$4_results.csv" ]; then
+		echo "file autobench/$3_$4_results.csv already exists"
 	else
 		#### autobench command for multiple clients
-		#autobench_command="autobench_admin --single_host --host1 $1 --port1 $port --uri1 /application/index/$2 --clients $client1,$client2 --low_rate $low_rate --rate_step $rate_step --high_rate $high_rate --num_call $num_call --const_test_time $test_time --timeout $timeout --output_fmt $output_format --file autobench/$3/$1_results.csv"
+		#autobench_command="autobench_admin --single_host --host1 $1 --port1 $port --uri1 /application/index/$2 --clients $client1,$client2 --low_rate $low_rate --rate_step $rate_step --high_rate $high_rate --num_call $num_call --const_test_time $test_time --timeout $timeout --output_fmt $output_format --file autobench/$3_$4_results.csv"
 		
 		#### autobench command for a single client
-		autobench_command="autobench --single_host --host1 $1 --port1 $port --uri1 /application/index/$2 --low_rate $low_rate --rate_step $rate_step --high_rate $high_rate --num_call $num_call --const_test_time $test_time --timeout $timeout --output_fmt $output_format --file autobench/$3/$1_results.csv"
+		autobench_command="autobench --single_host --host1 $1 --port1 $port --uri1 /application/index/$2 --low_rate $low_rate --rate_step $rate_step --high_rate $high_rate --num_call $num_call --const_test_time $test_time --timeout $timeout --output_fmt $output_format --file autobench/$3_$4_results.csv"
+		
+		#### warmup command
+		autobench_warmup_command="autobench --single_host --host1 $1 --port1 $port --uri1 /application/index/$2 --low_rate $warmup_low_rate --rate_step $warmup_rate_step --high_rate $warmup_high_rate --num_call $num_call --const_test_time $warmup_test_time --timeout $timeout --output_fmt $output_format --file autobench/warmup/$3_$4_results.csv"
 		
 		#### save command to textfile
-		echo $autobench_command > autobench/$3/$1_cli.txt
-		#### run command
-		$autobench_command >> autobench_sdtout.txt
+		echo $autobench_command > autobench/$3_$4_cli.txt
+		#### run warmup and test command
+		$autobench_warmup_command
+		$autobench_command >> autobench/$4_autobench_stdout.txt
 	fi
 }
 
@@ -140,7 +151,7 @@ function produce_workload() {
 		echo "##################################################################################
 Test environment ${envs[$i]} with URI $1.
 ----------------------------------------------------------------------------------"
-		produce_load ${envs[$i]} $1 $2
+		produce_load ${envs[$i]} $1 $2 ${envs_names[$i]}
 		echo ""
 	done
 }

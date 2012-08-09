@@ -1,0 +1,1 @@
+autobench --single_host --host1 wsmt4m.elasticbeanstalk.com --port1 80 --uri1 /application/index/schedule-bbc-one-evening-20120721-xml --low_rate 50 --rate_step 20 --high_rate 90 --num_call 1 --const_test_time 300 --timeout 2 --output_fmt csv --file autobench/today-evening-xml_wsmt4m_results.csv
