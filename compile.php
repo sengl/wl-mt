@@ -17,6 +17,10 @@ if ($testrun_number == 1) {
     $dir = $base_dir . "1st_" . $environment;
 } elseif ($testrun_number == 2) {
     $dir = $base_dir . "2nd_" . $environment;
+} elseif ($testrun_number == 3) {
+    $dir = $base_dir . "3rd_" . $environment;
+} elseif ($testrun_number == 4) {
+    $dir = $base_dir . "4th_" . $environment;
 }
 
 // compiled output file first line array
@@ -25,7 +29,7 @@ $compiled = array(
 );
 
 // recursively iterate over directory and add each result case to the compiled output file
-function recursiveIterateDirectory($directory, &$compiled, $environment = "") {
+function recursiveIterateDirectory($directory) {
     $directoryIterator = new RecursiveDirectoryIterator($directory);
     foreach ($directoryIterator as $file) {
         // ignore the warump results
@@ -34,7 +38,7 @@ function recursiveIterateDirectory($directory, &$compiled, $environment = "") {
         }
         // if current iterator is a directory call the recursive function with the current iterator
         if ($directoryIterator->hasChildren()) {
-            recursiveIterateDirectory($directoryIterator->getChildren()->getPath(), $compiled, $environment);
+            recursiveIterateDirectory($directoryIterator->getChildren()->getPath());
         }
         // ignore "." and ".."
         if ($directoryIterator->isDot()) {
@@ -73,11 +77,11 @@ function recursiveIterateDirectory($directory, &$compiled, $environment = "") {
                 }
                 
                 // insert environment
-                if ($environment == "wsmt1m") {
+                if ($GLOBALS["environment"] == "wsmt1m") {
                     $line[1] = "1";
-                } elseif ($environment == "wsmt2m") {
+                } elseif ($GLOBALS["environment"] == "wsmt2m") {
                     $line[1] = "2";
-                } elseif ($environment == "wsmt4m") {
+                } elseif ($GLOBALS["environment"] == "wsmt4m") {
                     $line[1] = "3";
                 } else {
                     $line[1] = "";
@@ -137,13 +141,24 @@ function recursiveIterateDirectory($directory, &$compiled, $environment = "") {
                 $line[12] = str_replace(".", ",", $data[8]);
                 // insert error_rate
                 $line[13] = str_replace(".", ",", $data[9]);
-                // insert sample_count_reply_rate
-                $line[14] = "59";
-                // insert duration
-                $line[15] = "300,000";
+                
+                // insert sample_count_reply_rate and duration
+                if ($GLOBALS["testrun_number"] == 1) {
+                    $line[14] = "59";
+                    $line[15] = "300,000";
+                } elseif ($GLOBALS["testrun_number"] == 2) {
+                    $line[14] = "59";
+                    $line[15] = "300,000";
+                } elseif ($GLOBALS["testrun_number"] == 3) {
+                    $line[14] = "6";
+                    $line[15] = "30,000";
+                } elseif ($GLOBALS["testrun_number"] == 4) {
+                    $line[14] = "6";
+                    $line[15] = "30,000";
+                }
                 
                 // add line to compiled output 
-                $compiled[] = $line;
+                $GLOBALS["compiled"][] = $line;
             }
             // close the file
             fclose($handle);
@@ -152,7 +167,7 @@ function recursiveIterateDirectory($directory, &$compiled, $environment = "") {
 }
 
 // recursively iterate over defined directory
-recursiveIterateDirectory($dir, $compiled, $environment);
+recursiveIterateDirectory($dir);
 
 // open/create the output file with write permissions
 $handle = fopen($dir . "_output.csv", 'w');

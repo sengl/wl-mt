@@ -1,0 +1,69 @@
+httperf --timeout=2 --client=0/1 --server=wsmt4m.elasticbeanstalk.com --port=80 --uri=/application/index/schedule-bbc-one-20120721-xml --rate=80 --send-buffer=4096 --recv-buffer=16384 --num-conns=2400 --num-calls=1
+Maximum connect burst length: 8
+
+Total: connections 2400 requests 2400 replies 2400 test-duration 30.118 s
+
+Connection rate: 79.7 conn/s (12.5 ms/conn, <=22 concurrent connections)
+Connection time [ms]: min 42.7 avg 113.5 max 271.8 median 120.5 stddev 33.0
+Connection time [ms]: connect 1.9
+Connection length [replies/conn]: 1.000
+
+Request rate: 79.7 req/s (12.5 ms/req)
+Request size [B]: 127.0
+
+Reply rate [replies/s]: min 75.8 avg 79.6 max 82.4 stddev 2.2 (6 samples)
+Reply time [ms]: response 106.0 transfer 5.7
+Reply size [B]: header 191.0 content 7944.0 footer 0.0 (total 8135.0)
+Reply status: 1xx=0 2xx=2400 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 9.67 system 20.44 (user 32.1% system 67.9% total 100.0%)
+Net I/O: 642.9 KB/s (5.3*10^6 bps)
+
+Errors: total 0 client-timo 0 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0
+httperf --timeout=2 --client=0/1 --server=wsmt4m.elasticbeanstalk.com --port=80 --uri=/application/index/schedule-bbc-one-20120721-json --rate=80 --send-buffer=4096 --recv-buffer=16384 --num-conns=2400 --num-calls=1
+Maximum connect burst length: 8
+
+Total: connections 2400 requests 2400 replies 2400 test-duration 30.049 s
+
+Connection rate: 79.9 conn/s (12.5 ms/conn, <=22 concurrent connections)
+Connection time [ms]: min 42.2 avg 109.6 max 272.5 median 119.5 stddev 29.9
+Connection time [ms]: connect 2.0
+Connection length [replies/conn]: 1.000
+
+Request rate: 79.9 req/s (12.5 ms/req)
+Request size [B]: 128.0
+
+Reply rate [replies/s]: min 77.2 avg 79.5 max 80.2 stddev 1.3 (5 samples)
+Reply time [ms]: response 102.5 transfer 5.2
+Reply size [B]: header 192.0 content 4158.0 footer 0.0 (total 4350.0)
+Reply status: 1xx=0 2xx=2400 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 10.00 system 20.03 (user 33.3% system 66.7% total 100.0%)
+Net I/O: 349.3 KB/s (2.9*10^6 bps)
+
+Errors: total 0 client-timo 0 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0
+httperf --timeout=2 --client=0/1 --server=wsmt4m.elasticbeanstalk.com --port=80 --uri=/application/index/schedule-bbc-one-evening-20120721-xhtml --rate=80 --send-buffer=4096 --recv-buffer=16384 --num-conns=2400 --num-calls=1
+Maximum connect burst length: 8
+
+Total: connections 2400 requests 2400 replies 2400 test-duration 30.106 s
+
+Connection rate: 79.7 conn/s (12.5 ms/conn, <=25 concurrent connections)
+Connection time [ms]: min 68.0 avg 163.6 max 420.7 median 143.5 stddev 46.0
+Connection time [ms]: connect 2.5
+Connection length [replies/conn]: 1.000
+
+Request rate: 79.7 req/s (12.5 ms/req)
+Request size [B]: 137.0
+
+Reply rate [replies/s]: min 78.2 avg 79.5 max 82.6 stddev 1.6 (6 samples)
+Reply time [ms]: response 130.1 transfer 31.0
+Reply size [B]: header 206.0 content 159904.0 footer 2.0 (total 160112.0)
+Reply status: 1xx=0 2xx=2400 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 8.03 system 22.07 (user 26.7% system 73.3% total 100.0%)
+Net I/O: 12475.3 KB/s (102.2*10^6 bps)
+
+Errors: total 0 client-timo 0 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0

@@ -1,0 +1,23 @@
+httperf --timeout=2 --client=0/1 --server=wsmt4m.elasticbeanstalk.com --port=80 --uri=/application/index/schedule-bbc-one-xml --rate=60 --send-buffer=4096 --recv-buffer=16384 --num-conns=1800 --num-calls=1
+Maximum connect burst length: 6
+
+Total: connections 1800 requests 1800 replies 1610 test-duration 30.051 s
+
+Connection rate: 59.9 conn/s (16.7 ms/conn, <=125 concurrent connections)
+Connection time [ms]: min 40.2 avg 400.7 max 2044.8 median 106.5 stddev 572.6
+Connection time [ms]: connect 2.0
+Connection length [replies/conn]: 1.000
+
+Request rate: 59.9 req/s (16.7 ms/req)
+Request size [B]: 118.0
+
+Reply rate [replies/s]: min 15.4 avg 53.4 max 68.8 stddev 19.0 (6 samples)
+Reply time [ms]: response 383.9 transfer 14.7
+Reply size [B]: header 196.0 content 15931.0 footer 1.0 (total 16128.0)
+Reply status: 1xx=0 2xx=1610 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 8.02 system 22.02 (user 26.7% system 73.3% total 100.0%)
+Net I/O: 850.7 KB/s (7.0*10^6 bps)
+
+Errors: total 190 client-timo 190 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0

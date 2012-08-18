@@ -1,0 +1,46 @@
+httperf --timeout=2 --client=0/1 --server=wsmt2m.elasticbeanstalk.com --port=80 --uri=/application/index/schedule-bbc-one-xhtml --rate=35 --send-buffer=4096 --recv-buffer=16384 --num-conns=1050 --num-calls=1
+Maximum connect burst length: 4
+
+Total: connections 1050 requests 1050 replies 1050 test-duration 30.186 s
+
+Connection rate: 34.8 conn/s (28.7 ms/conn, <=15 concurrent connections)
+Connection time [ms]: min 84.2 avg 175.5 max 416.3 median 158.5 stddev 46.8
+Connection time [ms]: connect 5.6
+Connection length [replies/conn]: 1.000
+
+Request rate: 34.8 req/s (28.7 ms/req)
+Request size [B]: 120.0
+
+Reply rate [replies/s]: min 33.7 avg 34.7 max 35.1 stddev 0.5 (6 samples)
+Reply time [ms]: response 96.5 transfer 73.4
+Reply size [B]: header 206.0 content 176629.0 footer 2.0 (total 176837.0)
+Reply status: 1xx=0 2xx=1050 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 9.10 system 21.09 (user 30.1% system 69.9% total 100.0%)
+Net I/O: 6011.1 KB/s (49.2*10^6 bps)
+
+Errors: total 0 client-timo 0 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0
+httperf --timeout=2 --client=0/1 --server=wsmt2m.elasticbeanstalk.com --port=80 --uri=/application/index/schedule-bbc-one-20120721-xhtml --rate=35 --send-buffer=4096 --recv-buffer=16384 --num-conns=1050 --num-calls=1
+Maximum connect burst length: 3
+
+Total: connections 1050 requests 1050 replies 1050 test-duration 30.181 s
+
+Connection rate: 34.8 conn/s (28.7 ms/conn, <=14 concurrent connections)
+Connection time [ms]: min 115.3 avg 225.9 max 371.1 median 236.5 stddev 42.5
+Connection time [ms]: connect 6.2
+Connection length [replies/conn]: 1.000
+
+Request rate: 34.8 req/s (28.7 ms/req)
+Request size [B]: 129.0
+
+Reply rate [replies/s]: min 33.1 avg 34.7 max 35.5 stddev 0.9 (5 samples)
+Reply time [ms]: response 96.3 transfer 123.4
+Reply size [B]: header 206.0 content 165768.0 footer 2.0 (total 165976.0)
+Reply status: 1xx=0 2xx=1050 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 9.02 system 21.03 (user 29.9% system 69.7% total 99.6%)
+Net I/O: 5643.2 KB/s (46.2*10^6 bps)
+
+Errors: total 0 client-timo 0 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0

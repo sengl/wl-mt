@@ -1,0 +1,12 @@
+1ST RUN
+2012-08-10 19:45-22:00
+	full-json (70)
+	full-xhtml (50)
+	full-xml (60)
+	today-evening-json (90)
+	today-evening-xhtml (80)
+	today-evening-xml (90)
+	today-json (80)
+	today-xhtml (70)
+	today-xml (80)
+	(+autobench_stdout.txt)
